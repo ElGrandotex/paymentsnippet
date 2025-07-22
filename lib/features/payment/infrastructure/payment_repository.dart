@@ -12,8 +12,9 @@ class PaymentRepository implements IPaymentRepository {
       print('Card Number: ${payment.cardNumber}');
       print('Last 4: ${payment.cardLastFour}');
       print('Expiry: ${payment.expiryDate}');
-      if (payment.amount <= 0)
+      if (payment.amount <= 0) {
         return left(const PaymentFailure.invalidAmount());
+      }
 
       if (payment.paymentMethod == 'card') {
         if (payment.cardLastFour?.length != 4 ||
