@@ -9,9 +9,6 @@ class PaymentRepository implements IPaymentRepository {
     Payment payment,
   ) async {
     try {
-      print('Card Number: ${payment.cardNumber}');
-      print('Last 4: ${payment.cardLastFour}');
-      print('Expiry: ${payment.expiryDate}');
       if (payment.amount <= 0) {
         return left(const PaymentFailure.invalidAmount());
       }

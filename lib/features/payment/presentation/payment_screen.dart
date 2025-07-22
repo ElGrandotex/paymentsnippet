@@ -1,4 +1,3 @@
-// lib/features/payment/presentation/payment_screen.dart
 import 'package:flutter/material.dart';
 
 import 'payment_form.dart';
